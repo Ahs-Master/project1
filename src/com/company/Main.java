@@ -40,5 +40,6 @@ public class Main {
         System.out.println();
         System.out.println("Uw keuze: ");
 
+        int keuze = scanner.nextInt();
     }
 }
