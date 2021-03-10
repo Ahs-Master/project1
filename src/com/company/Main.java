@@ -4,16 +4,23 @@ import java.util.Scanner;
 
 public class Main {
 
-    Scanner scanner = new Scanner(System.in);
+    public static String naam;
+
     public static void main(String[] args) {
-        beginScherm();
+        voerJeNaamIn();
     }
 
     public static void voerJeNaamIn () {
-        System.out.println("Voer je naam in: ");
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Voer je naam in: ");
+        naam = scanner.next();
+        beginScherm();
     }
     public static void beginScherm() {
-        System.out.println("Menu");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println();
+        System.out.println("Hallo " + naam);
+        System.out.println("Menu: ");
         System.out.println();
         System.out.println("1) Lijst met examens");
         System.out.println();
