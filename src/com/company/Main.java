@@ -42,15 +42,13 @@ public class Main {
         System.out.println();
         System.out.println("Uw keuze: ");
 
-        int keuze = -10000;
-        //boolean check = scanner.hasNextInt();
+        int keuze;
 
-        //try {
             if (scanner.hasNextInt() == true) {
                 keuze = scanner.nextInt();
                 scanner.nextLine();
                 if (keuze == 1) {
-                    System.out.println("ga naar menu van 1");
+                    examenLijst();
                 } else if (keuze == 2) {
                     System.out.println("ga naar menu van 2");
                 } else if (keuze == 3) {
@@ -76,45 +74,39 @@ public class Main {
                 scanner.nextLine();
                 beginScherm();
             }
-        //}
-       // catch (Exception e) {
-         //   System.out.println("Voer een getal in! Probeer het opnieuw. Druk Enter");
-         //   scanner.nextLine();
-         //   beginScherm();
-       // }
-        /*if (keuze != -29) {
-            System.out.println("Voer een getal in! Probeer het opnieuw. Druk Enter");
-            scanner.nextLine();
-            beginScherm();
-        } else {
-            if (keuze == 1) {
-                System.out.println("ga naar menu van 1");
-            }
-            else if (keuze == 2) {
-                System.out.println("ga naar menu van 2");
-            }
-            else if (keuze == 3) {
-                System.out.println("ga naar menu van 3");
-            }
-            else if (keuze == 4) {
-                System.out.println("ga naar menu van 4");
-            }
-            else if (keuze == 5) {
-                System.out.println("ga naar menu van 5");
-            }
-            else if (keuze == 6) {
-                System.out.println("ga naar menu van 6");
-            }
-            else if (keuze == 7) {
-                System.out.println("ga naar menu van 7");
-            }
-            else if (keuze == 0) {
-                System.out.println("ga naar menu van 0");
-            }
-            else if (keuze != 1 || keuze != 2 || keuze != 3 || keuze != 4 || keuze != 5 || keuze != 6 || keuze != 7 || keuze != 0 ) {
-                System.out.println("Kies aub een menu... Druk op Enter om verder te gaan");
-                beginScherm();
-            }
-        }*/
+
     }
+
+    public static void examenLijst () {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Lijst van examens");
+        System.out.println();
+        System.out.println("-Theorie Examen");
+        System.out.println();
+        System.out.println("-Praktijk Examen");
+        System.out.println();
+        System.out.println("1) Terug naar hoofdmenu");
+
+        int keuze;
+
+        if (scanner.hasNextInt() == true) {
+            keuze = scanner.nextInt();
+            scanner.nextLine();
+            if (keuze == 1) {
+                beginScherm();
+            } else {
+                System.out.println("Kies aub een menu. Druk op Enter om verder te gaan.");
+                scanner.nextLine();
+                examenLijst();
+            }
+
+        } else {
+            System.out.println("Kies aub een getal. Druk op Enter om verder te gaan.");
+            scanner.nextLine();
+            examenLijst();
+        }
+
+    }
+
+
 }
