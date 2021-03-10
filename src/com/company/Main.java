@@ -40,6 +40,79 @@ public class Main {
         System.out.println();
         System.out.println("Uw keuze: ");
 
-        int keuze = scanner.nextInt();
+        int keuze = -10000;
+        //boolean check = scanner.hasNextInt();
+
+        //try {
+            if (scanner.hasNextInt() == true) {
+                keuze = scanner.nextInt();
+                scanner.nextLine();
+                if (keuze == 1) {
+                    System.out.println("ga naar menu van 1");
+                } else if (keuze == 2) {
+                    System.out.println("ga naar menu van 2");
+                } else if (keuze == 3) {
+                    System.out.println("ga naar menu van 3");
+                } else if (keuze == 4) {
+                    System.out.println("ga naar menu van 4");
+                } else if (keuze == 5) {
+                    System.out.println("ga naar menu van 5");
+                } else if (keuze == 6) {
+                    System.out.println("ga naar menu van 6");
+                } else if (keuze == 7) {
+                    System.out.println("ga naar menu van 7");
+                } else if (keuze == 0) {
+                    System.out.println("ga naar menu van 0");
+                } else if (keuze != 1 || keuze != 2 || keuze != 3 || keuze != 4 || keuze != 5 || keuze != 6 || keuze != 7 || keuze != 0) {
+                    System.out.println("Kies aub een menu... Druk op Enter om verder te gaan");
+                    scanner.nextLine();
+                    beginScherm();
+                }
+            } else {
+                System.out.println("Voer een getal in! Probeer het opnieuw. Druk Enter");
+                scanner.nextLine();
+                scanner.nextLine();
+                beginScherm();
+            }
+        //}
+       // catch (Exception e) {
+         //   System.out.println("Voer een getal in! Probeer het opnieuw. Druk Enter");
+         //   scanner.nextLine();
+         //   beginScherm();
+       // }
+        /*if (keuze != -29) {
+            System.out.println("Voer een getal in! Probeer het opnieuw. Druk Enter");
+            scanner.nextLine();
+            beginScherm();
+        } else {
+            if (keuze == 1) {
+                System.out.println("ga naar menu van 1");
+            }
+            else if (keuze == 2) {
+                System.out.println("ga naar menu van 2");
+            }
+            else if (keuze == 3) {
+                System.out.println("ga naar menu van 3");
+            }
+            else if (keuze == 4) {
+                System.out.println("ga naar menu van 4");
+            }
+            else if (keuze == 5) {
+                System.out.println("ga naar menu van 5");
+            }
+            else if (keuze == 6) {
+                System.out.println("ga naar menu van 6");
+            }
+            else if (keuze == 7) {
+                System.out.println("ga naar menu van 7");
+            }
+            else if (keuze == 0) {
+                System.out.println("ga naar menu van 0");
+            }
+            else if (keuze != 1 || keuze != 2 || keuze != 3 || keuze != 4 || keuze != 5 || keuze != 6 || keuze != 7 || keuze != 0 ) {
+                System.out.println("Kies aub een menu... Druk op Enter om verder te gaan");
+                beginScherm();
+            }
+        }*/
     }
 }
