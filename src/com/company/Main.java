@@ -42,4 +42,15 @@ public class Main {
 
         int keuze = scanner.nextInt();
     }
+    public static void examensAfnemen(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("1) Theorie examen");
+        System.out.println();
+        System.out.println("2) Praktijk examen");
+        System.out.println();
+        System.out.printf("Kies uw examen:");
+
+        if
+
+    }
 }
