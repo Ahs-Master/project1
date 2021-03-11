@@ -95,16 +95,53 @@ public class Main {
             } else {
                 System.out.println("Kies aub een menu. Druk op Enter om verder te gaan.");
                 scanner.nextLine();
+                scanner.nextLine();
                 examenLijst();
             }
 
         } else {
             System.out.println("Kies aub een getal. Druk op Enter om verder te gaan.");
             scanner.nextLine();
+            scanner.nextLine();
             examenLijst();
         }
 
     }
+
+    public static void studentenLijst () {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Lijst van studenten");
+        System.out.println();
+        System.out.println("Kevin van Hoogendoorn");
+        System.out.println("Mansori Derksen");
+        System.out.println("Johan Baardemans");
+        System.out.println("Gert Jan");
+        System.out.println();
+        System.out.println("1) Terug naar hoofdmenu");
+
+        int keuze;
+
+        if (scanner.hasNextInt() == true) {
+            keuze = scanner.nextInt();
+            scanner.nextLine();
+            if (keuze == 1) {
+                beginScherm();
+            } else {
+                System.out.println("Kies aub een menu. Druk op Enter om verder te gaan.");
+                scanner.nextLine();
+                scanner.nextLine();
+                studentenLijst();
+            }
+
+        } else {
+            System.out.println("Kies aub een getal. Druk op Enter om verder te gaan.");
+            scanner.nextLine();
+            scanner.nextLine();
+            studentenLijst();
+        }
+
+    }
+
 
 
 }
