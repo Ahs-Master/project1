@@ -85,7 +85,7 @@ public class Menu {
         int examen;
         examen = scanner.nextInt();
         if (examen == 1) {
-            TheorieExamenVragen.toetsMakken();
+            TheorieExamenVragen.ToetsenMakken();
         } else if (examen == 2) {
               System.out.println("Praktijk");          //PraktijkExamenVragen.toetsMakken();
         } else {

@@ -6,13 +6,11 @@ public class Main {
 
 
         TheorieExamenVragen toets1 = new TheorieExamenVragen();
-        TheorieExamenVragen.toetsMakken();
+        TheorieExamenVragen.ToetsenMakken();
 
 
 
-        //de opdrachtgever moet een student kunnen voegen aan de lijst
 
-        ///qjwfgwjqf
 
 
 
