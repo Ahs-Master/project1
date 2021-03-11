@@ -18,7 +18,7 @@ public class TheorieExamenClass {
         this.aantwoord = aantwoord;
 
         this.keuzes = new ArrayList<>();
-        this.keuzes.addAll(Arrays.asList(keuzes));
+        this.keuzes.addAll(Arrays.asList(keuzes)); // add alles wat in de lijst staat.
 
 
 

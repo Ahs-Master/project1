@@ -10,9 +10,7 @@ public class Main {
 
 
 
-        //de opdrachtgever moet een student kunnen voegen aan de lijst
 
-        ///qjwfgwjqf
 
 
 

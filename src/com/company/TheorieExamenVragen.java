@@ -9,9 +9,9 @@ public class TheorieExamenVragen {
     public TheorieExamenVragen() {
 
         //Vraag 1
-        String vraag1 = "Wat is jou naam?"; //Vraag
-        String[] keuze1 = {"Kevin", "Johnny", "Rachid"}; //Aantwoorden.
-        String aantwoord1 = "Rachid";
+        String vraag1 = "Wat moet je doen als je iemand ziet lopen op de Zebrapad?"; //Vraag
+        String[] keuze1 = {"Doorrijen", "Doodtrappen", "Stoppen"}; //Aantwoorden.
+        String aantwoord1 = "Stoppen";
         theorieExamenVragens.add(new TheorieExamenClass(vraag1,keuze1,aantwoord1)); // de vraag en aantwoorden in de array stoppen.
 
         //Vraag 2
