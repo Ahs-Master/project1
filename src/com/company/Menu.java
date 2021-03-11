@@ -4,13 +4,19 @@ import java.util.Scanner;
 
 public class Menu {
 
-// de Menu komt in zijn eigen class.
+    public static String naam;
 
 
-    public static void menu() {
+    public static void voerJeNaamIn () {
+        Scanner scanner = new Scanner(System.in);
+        System.out.printf("Voer je naam in: ");
+        naam = scanner.next();
+        beginScherm();
+    }
+    public static void beginScherm() {
         Scanner scanner = new Scanner(System.in);
         System.out.println();
-        System.out.println("Hallo ");
+        System.out.println("Hallo " + naam);
         System.out.println("Menu: ");
         System.out.println();
         System.out.println("1) Lijst met examens");
@@ -29,7 +35,7 @@ public class Menu {
         System.out.println();
         System.out.println("0) Afsluiten");
         System.out.println();
-        System.out.println("Uw keuze: ");
+        System.out.print("Uw keuze: ");
 
         int keuze;
 
@@ -39,9 +45,7 @@ public class Menu {
             if (keuze == 1) {
                 examenLijst();
             } else if (keuze == 2) {
-
-
-
+                System.out.println("ga naar menu van 2");
             } else if (keuze == 3) {
                 System.out.println("ga naar menu van 3");
             } else if (keuze == 4) {
@@ -57,13 +61,13 @@ public class Menu {
             } else if (keuze != 1 || keuze != 2 || keuze != 3 || keuze != 4 || keuze != 5 || keuze != 6 || keuze != 7 || keuze != 0) {
                 System.out.println("Kies aub een menu... Druk op Enter om verder te gaan");
                 scanner.nextLine();
-                Main.voerJeNaamIn();
+                beginScherm();
             }
         } else {
             System.out.println("Voer een getal in! Probeer het opnieuw. Druk Enter");
             scanner.nextLine();
             scanner.nextLine();
-            Main.voerJeNaamIn();
+            beginScherm();
         }
 
     }
@@ -84,7 +88,7 @@ public class Menu {
             keuze = scanner.nextInt();
             scanner.nextLine();
             if (keuze == 1) {
-                Main.voerJeNaamIn();
+                beginScherm();
             } else {
                 System.out.println("Kies aub een menu. Druk op Enter om verder te gaan.");
                 scanner.nextLine();
@@ -98,4 +102,6 @@ public class Menu {
         }
 
     }
+
+
 }
