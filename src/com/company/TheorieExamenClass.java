@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class TheorieExamenClass {
+public class TheorieExamenClass{
+
+
 
     //instance variables voor een examentoets.
     private String vraag;

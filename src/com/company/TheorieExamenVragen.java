@@ -8,6 +8,7 @@ public class TheorieExamenVragen {
 
     public TheorieExamenVragen() {
 
+
         //Vraag 1
         String vraag1 = "Wat moet je doen als je iemand ziet lopen op de Zebrapad?"; //Vraag
         String[] keuze1 = {"Doorrijen", "Doodtrappen", "Stoppen"}; //Aantwoorden.
@@ -30,13 +31,13 @@ public class TheorieExamenVragen {
             Scanner scanner = new Scanner(System.in);
             int correcteAantwoorden = 0; // Correcte aantwoorden voor score. de score systeem heb ik nog niet geimplementeerd. Ben moe.
 
-            for (int vraag = 0; vraag < theorieExamenVragens.size(); vraag++) {   // de vragen uitprinten op scherm.
-                System.out.println(theorieExamenVragens.get(vraag).getVraag());
+            for (TheorieExamenClass theorieExamenVragen : theorieExamenVragens) {   // de vragen uitprinten op scherm.
+                System.out.println(theorieExamenVragen.getVraag());
 
                 //om te checken hoeveel keuzes je heb en keuzes op de scherm uitprinten
-                int numKeuzes = theorieExamenVragens.get(vraag).getKeuzes().size();
+                int numKeuzes = theorieExamenVragen.getKeuzes().size();
                 for (int keuze = 0; keuze < numKeuzes; keuze++) {
-                    System.out.println((keuze + 1) + ": " + theorieExamenVragens.get(vraag).getKeuzes().get(keuze));
+                    System.out.println((keuze + 1) + ": " + theorieExamenVragen.getKeuzes().get(keuze));
                 }
 
                 // aantwoord geven op de vraag met 1 tot en met de (3)keuzes.
@@ -44,8 +45,8 @@ public class TheorieExamenVragen {
                 System.out.print("Aantwoord: ");
                 int aantwoord = scanner.nextInt();
                 System.out.println();
-                ArrayList<String> Keuzes = theorieExamenVragens.get(vraag).getKeuzes();
-                String correcteAntwoord = theorieExamenVragens.get(vraag).getAantwoord();
+                ArrayList<String> Keuzes = theorieExamenVragen.getKeuzes();
+                String correcteAntwoord = theorieExamenVragen.getAantwoord();
                 int correcteAntwoordIndex = Keuzes.indexOf(correcteAntwoord);
                 if (aantwoord == correcteAntwoordIndex + 1) {
                     correcteAantwoorden++;
@@ -56,7 +57,7 @@ public class TheorieExamenVragen {
 
 
 
-             System.out.print(String.format("je heb : %s van de %s punten gehaald. ",correcteAantwoorden,theorieExamenVragens.size()));
+             System.out.printf("je heb : %s van de %s punten gehaald. ",correcteAantwoorden,theorieExamenVragens.size());
             }
 
 
