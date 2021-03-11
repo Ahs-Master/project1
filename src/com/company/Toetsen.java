@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Toets {
+public class Toetsen {
     private String vraag;
     private ArrayList<String> keuzes;
     private String aantwoord;
 
 
-    public Toets(String vraag, String[] keuzes, String aantwoord) {
+    public Toetsen(String vraag, String[] keuzes, String aantwoord) {
         this.vraag = vraag;
         this.aantwoord = aantwoord;
 

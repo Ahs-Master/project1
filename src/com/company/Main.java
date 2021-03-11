@@ -6,7 +6,7 @@ public class Main {
 
 
         TheorieExamenVragen toets1 = new TheorieExamenVragen();
-        TheorieExamenVragen.toetsMakken();
+        TheorieExamenVragen.ToetsenMakken();
 
 
 

@@ -3,7 +3,7 @@ package com.company;
 import java.util.*;
 
 public class PraktijkExamenVragen {
-    private static ArrayList<PraktijkExamenClass> praktijkExamenVragens = new ArrayList<>();
+    private static ArrayList<Toetsen> praktijkExamenVragens = new ArrayList<>();
 
 
     public PraktijkExamenVragen() {
@@ -12,13 +12,13 @@ public class PraktijkExamenVragen {
         String vraag1 = "Wat moet je doen als je iemand ziet lopen op de Zebrapad?"; //Vraag
         String[] keuze1 = {"Doorrijen", "Doodtrappen", "Stoppen"}; //Aantwoorden.
         String aantwoord1 = "Stoppen";
-        praktijkExamenVragens.add(new PraktijkExamenClass(vraag1,keuze1,aantwoord1)); // de vraag en aantwoorden in de array stoppen.
+        praktijkExamenVragens.add(new Toetsen(vraag1,keuze1,aantwoord1)); // de vraag en aantwoorden in de array stoppen.
 
         //Vraag 2
         String vraag2 = "Wat is jou naam?"; //Vraag
         String[] keuze2 = {"Kevin", "Johnny", "Rachid"}; //Aantwoorden.
         String aantwoord2 = "Rachid";
-        praktijkExamenVragens.add(new PraktijkExamenClass(vraag2,keuze2,aantwoord2)); // de vraag en aantwoorden in de array stoppen.
+        praktijkExamenVragens.add(new Toetsen(vraag2,keuze2,aantwoord2)); // de vraag en aantwoorden in de array stoppen.
 
 
         Collections.shuffle(praktijkExamenVragens, new Random()); //vragen in random elke keer dat de test gemaakt wordt.
@@ -26,7 +26,7 @@ public class PraktijkExamenVragen {
 
     }
 
-    public static void toetsMakken(){  // om de toets te beginnen
+    public static void ToetsenMakken(){  // om de Toetsen te beginnen
         Scanner scanner = new Scanner(System.in);
         int correcteAantwoorden = 0; // Correcte aantwoorden voor score. de score systeem heb ik nog niet geimplementeerd. Ben moe.
 
@@ -56,13 +56,13 @@ public class PraktijkExamenVragen {
 
 
 
-        System.out.print(String.format("je heb : %s van de %s punten gehaald. ",correcteAantwoorden,praktijkExamenVragens.size()));
+        System.out.printf("je heb : %s van de %s punten gehaald. ",correcteAantwoorden,praktijkExamenVragens.size());
     }
 
 
     //om de vragen op de scherm te tonen.
     public static void displayVragen() {
-        for (PraktijkExamenClass theorieExamenVragen : praktijkExamenVragens) {
+        for (Toetsen theorieExamenVragen : praktijkExamenVragens) {
             System.out.println(theorieExamenVragen.getVraag());
 
         }
