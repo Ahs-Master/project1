@@ -17,12 +17,11 @@ public class TheorieExamenClass {
         this.vraag = vraag;
         this.aantwoord = aantwoord;
 
-        this.keuzes = new ArrayList<String>();
+        this.keuzes = new ArrayList<>();
         this.keuzes.addAll(Arrays.asList(keuzes));
         //for (int i = 0; i < keuzes.length; i++){
         //            this.keuzes.add(keuzes[i]);
         //
-        //   Weet niet of de bovenstaande code werkt. de Comment is een backup.
 
 
 

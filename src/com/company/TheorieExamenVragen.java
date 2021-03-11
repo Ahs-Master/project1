@@ -12,8 +12,9 @@ public class TheorieExamenVragen {
 
         //Vraag 1
         String vraag1 = "Wat is jou naam?"; //Vraag
-        String[] aantwoord1 = {"Kevin", "Johnny", "Rachid"}; //Aantwoorden.
-        theorieExamenVragens.add(new TheorieExamenClass(vraag1, aantwoord1, "Rachid")); // de vraag en aantwoorden in de array stoppen.
+        String[] keuze1 = {"Kevin", "Johnny", "Rachid"}; //Aantwoorden.
+        String aantwoord1 = "Rachid";
+        theorieExamenVragens.add(new TheorieExamenClass(vraag1, keuze1, aantwoord1)); // de vraag en aantwoorden in de array stoppen.
 
 
         //vraag 2
@@ -22,11 +23,9 @@ public class TheorieExamenVragen {
         theorieExamenVragens.add(new TheorieExamenClass(vraag2, aantwoord2, "Mahuma")); // de vraag en aantwoorden in de array stoppen.
 
         //        om meer vragen te makken gewoon copy paste ---------------->>>
-        //        String vraag2 = "Wat is jou adress?"; //Vraag
-        //        String[] aantwoord2 = {"Souax", "Jan-Thiel", "Mahuma"};//Aantwoorden.
-        //        theorieExamenVragens.add(new TheorieExamenClass(vraag2, aantwoord2, "Mahuma")); // de vraag en aantwoorden in de array stoppen.
         //
-        // en de vraag en aantwoord veranderen ;)
+        //
+        //       en de vraag en aantwoord veranderen ;)
 
 
         Collections.shuffle(theorieExamenVragens, new Random()); //vragen in random elke keer dat de test gemaakt wordt.
@@ -34,7 +33,7 @@ public class TheorieExamenVragen {
 
     }
 
-        public void toetsMakken(){  // om de toets te beginnen
+        public static void toetsMakken(){  // om de toets te beginnen
             Scanner scanner = new Scanner(System.in);
             int correcteAantwoorden = 0; // Correcte aantwoorden voor score. de score systeem heb ik nog niet geimplementeerd. Ben moe.
 
@@ -62,7 +61,7 @@ public class TheorieExamenVragen {
 
     }
         //bonus om de vragen op de scherm te tonen.
-    public void DisplayVragen() {
+    public static void DisplayVragen() {
         for (TheorieExamenClass theorieExamenVragen : theorieExamenVragens) {
             System.out.println(theorieExamenVragen.getVraag());
 

@@ -6,12 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        TheorieExamenVragen.DisplayVragen();
 
-        Menu.voerJeNaamIn();
-
-
-        //Clean en overzichtelijker.
-        //Object Georienteerd
 
 
 
