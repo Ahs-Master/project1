@@ -10,16 +10,37 @@ public class TheorieExamenVragen {
 
 
         //Vraag 1
-        String vraag1 = "Wat moet je doen als je iemand ziet lopen op de Zebrapad?"; //Vraag
-        String[] keuze1 = {"Doorrijen", "Doodtrappen", "Stoppen"}; //Aantwoorden.
-        String aantwoord1 = "Stoppen";
-        theorieExamenVragens.add(new Toetsen(vraag1,keuze1,aantwoord1)); // de vraag en aantwoorden in de array stoppen.
 
-        //Vraag 2
+        String vraag1 = "Moet je mensen voor laten gaan als ze willen oversteken bij een zebrapad? ja of nee?"; //Vraag
+        String[] keuze1 = {"ja", "nee"}; //Aantwoorden.
+        String aantwoord1 = "ja";
+        theorieExamenVragens.add(new TheorieExamenClass(vraag1,keuze1,aantwoord1)); // de vraag en aantwoorden in de array stoppen.
+
+              //Vraag 2
         String vraag2 = "Wat is jou naam?"; //Vraag
         String[] keuze2 = {"Kevin", "Johnny", "Rachid"}; //Aantwoorden.
         String aantwoord2 = "Rachid";
         theorieExamenVragens.add(new Toetsen(vraag2,keuze2,aantwoord2)); // de vraag en aantwoorden in de array stoppen.
+
+        //Vraag 3
+        String vraag3 = "Wat is jou naam?"; //Vraag
+        String[] keuze3 = {"Kevin", "Johnny", "Rachid"}; //Aantwoorden.
+        String aantwoord3 = "Rachid";
+        theorieExamenVragens.add(new TheorieExamenClass(vraag2,keuze2,aantwoord2)); // de vraag en aantwoorden in de array stoppen.
+
+        //Vraag 4
+        String vraag4 = "Wat is jou naam?"; //Vraag
+        String[] keuze4 = {"Kevin", "Johnny", "Rachid"}; //Aantwoorden.
+        String aantwoord4 = "Rachid";
+        theorieExamenVragens.add(new TheorieExamenClass(vraag2,keuze2,aantwoord2)); // de vraag en aantwoorden in de array stoppen.
+
+        //Vraag 5
+        String vraag5 = "Wat is jou naam?"; //Vraag
+        String[] keuze5 = {"Kevin", "Johnny", "Rachid"}; //Aantwoorden.
+        String aantwoord5 = "Rachid";
+        theorieExamenVragens.add(new TheorieExamenClass(vraag2,keuze2,aantwoord2)); // de vraag en aantwoorden in de array stoppen.
+
+
 
 
        Collections.shuffle(theorieExamenVragens, new Random()); //vragen in random elke keer dat de test gemaakt wordt.
