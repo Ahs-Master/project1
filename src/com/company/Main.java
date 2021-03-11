@@ -38,7 +38,7 @@ public class Main {
         System.out.println();
         System.out.println("0) Afsluiten");
         System.out.println();
-        System.out.println("Uw keuze: ");
+        System.out.printf("Uw keuze: ");
 
         int keuze;
 
