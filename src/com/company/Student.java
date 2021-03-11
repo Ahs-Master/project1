@@ -21,4 +21,4 @@ public class Student {
         this.naam = naam;
     }
 }
-
+//Student class is best well eenvoudig.

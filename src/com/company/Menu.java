@@ -4,8 +4,10 @@ import java.util.Scanner;
 
 public class Menu {
 
+// de Menu komt in zijn eigen class.
 
-    public static void Menu() {
+
+    public static void menu() {
         Scanner scanner = new Scanner(System.in);
         System.out.println();
         System.out.println("Hallo ");

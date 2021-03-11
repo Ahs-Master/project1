@@ -10,7 +10,10 @@ public class Main {
 
 
         voerJeNaamIn();
-        Menu.Menu();
+        Menu.menu();
+
+        //Clean en overzichtelijker.
+        //Object Georienteerd
 
 
 

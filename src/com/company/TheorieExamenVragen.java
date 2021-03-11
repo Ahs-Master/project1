@@ -7,34 +7,49 @@ public class TheorieExamenVragen {
 
     public TheorieExamenVragen() {
 
+        //Array Initialiseren
         theorieExamenVragens = new ArrayList<>();
 
+        //Vraag 1
+        String vraag1 = "Wat is jou naam?"; //Vraag
+        String[] aantwoord1 = {"Kevin", "Johnny", "Rachid"}; //Aantwoorden.
+        theorieExamenVragens.add(new TheorieExamenClass(vraag1, aantwoord1, "Rachid")); // de vraag en aantwoorden in de array stoppen.
 
-        String vraag1 = "Wat is ou naam?";
-        String[] aantwoord1 = {"Kevin", "Johnny", "Rachid"};
-        theorieExamenVragens.add(new TheorieExamenClass(vraag1, aantwoord1, "Rachid"));
 
-        String vraag2 = "Wat is jou adress?";
-        String[] aantwoord2 = {"Souax", "Jan-Thiel", "Mahuma"};
-        theorieExamenVragens.add(new TheorieExamenClass(vraag2, aantwoord2, "Mahuma"));
+        //vraag 2
+        String vraag2 = "Wat is jou adress?"; //Vraag
+        String[] aantwoord2 = {"Souax", "Jan-Thiel", "Mahuma"};//Aantwoorden.
+        theorieExamenVragens.add(new TheorieExamenClass(vraag2, aantwoord2, "Mahuma")); // de vraag en aantwoorden in de array stoppen.
 
-        Collections.shuffle(theorieExamenVragens, new Random());
+        //        om meer vragen te makken gewoon copy paste ---------------->>>
+        //        String vraag2 = "Wat is jou adress?"; //Vraag
+        //        String[] aantwoord2 = {"Souax", "Jan-Thiel", "Mahuma"};//Aantwoorden.
+        //        theorieExamenVragens.add(new TheorieExamenClass(vraag2, aantwoord2, "Mahuma")); // de vraag en aantwoorden in de array stoppen.
+        //
+        // en de vraag en aantwoord veranderen ;)
+
+
+        Collections.shuffle(theorieExamenVragens, new Random()); //vragen in random elke keer dat de test gemaakt wordt.
 
 
     }
 
-        public void toetsMakken(){
+        public void toetsMakken(){  // om de toets te beginnen
             Scanner scanner = new Scanner(System.in);
-            int correcteAantwoorden = 0;
+            int correcteAantwoorden = 0; // Correcte aantwoorden voor score. de score systeem heb ik nog niet geimplementeerd. Ben moe.
 
-            for (int vraag = 0; vraag < theorieExamenVragens.size(); vraag++) {
+            for (int vraag = 0; vraag < theorieExamenVragens.size(); vraag++) {   // de vragen uitprinten op scherm.
                 System.out.println(theorieExamenVragens.get(vraag).getVraag());
-                //hoeveel keuzes heb je?
+
+
+                //om te checken hoeveel keuzes je heb en keuzes op de scherm uitprinten
                 int numKeuzes = theorieExamenVragens.get(vraag).getKeuzes().size();
-                // keuzes uitprinten op de scherm
                 for (int keuze = 0; keuze < numKeuzes; keuze++) {
                     System.out.println((keuze + 1) + ": " + theorieExamenVragens.get(vraag).getKeuzes().get(keuze));
                 }
+
+                // aantwoord geven op de vraag met 1 tot en met de keuzes.
+                // desnoods ook om te checken of de je een correcte aantwoord heb gekregen bij de vraag.
                 int aantwoord = scanner.nextInt();
                 ArrayList<String> Keuzes = theorieExamenVragens.get(vraag).getKeuzes();
                 String correcteAntwoord = theorieExamenVragens.get(vraag).getAantwoord();
@@ -46,7 +61,7 @@ public class TheorieExamenVragen {
             scanner.close();
 
     }
-
+        //bonus om de vragen op de scherm te tonen.
     public void DisplayVragen() {
         for (TheorieExamenClass theorieExamenVragen : theorieExamenVragens) {
             System.out.println(theorieExamenVragen.getVraag());
