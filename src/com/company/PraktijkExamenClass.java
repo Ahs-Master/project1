@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class TheorieExamenClass {
+public class PraktijkExamenClass {
 
     //instance variables voor een examentoets.
     private String vraag;
@@ -13,12 +13,14 @@ public class TheorieExamenClass {
 
 
     //Contstructor voor de Theorieexamentoets kan ook voor Praktijk. (Copy Paste).
-    public TheorieExamenClass (String vraag, String[] keuzes, String aantwoord){
+    public PraktijkExamenClass (String vraag, String[] keuzes, String aantwoord){
         this.vraag = vraag;
         this.aantwoord = aantwoord;
 
         this.keuzes = new ArrayList<>();
-        this.keuzes.addAll(Arrays.asList(keuzes));
+        for (int i = 0; i < keuzes.length; i++){
+            this.keuzes.add(keuzes[i]);
+        }
 
 
 

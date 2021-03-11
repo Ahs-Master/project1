@@ -51,7 +51,7 @@ public class Menu {
             } else if (keuze == 4) {
                 System.out.println("ga naar menu van 4");
             } else if (keuze == 5) {
-                System.out.println("ga naar menu van 5");
+                Menu.examenAfnemen();
             } else if (keuze == 6) {
                 System.out.println("ga naar menu van 6");
             } else if (keuze == 7) {
@@ -70,6 +70,27 @@ public class Menu {
             beginScherm();
         }
 
+
+
+
+    }
+    public static void examenAfnemen(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("1) Theorie examen");
+        System.out.println();
+        System.out.println("2) Praktijk examen");
+        System.out.println();
+        System.out.printf("Kies uw examen: ");
+
+        int examen;
+        examen = scanner.nextInt();
+        if (examen == 1) {
+            TheorieExamenVragen.toetsMakken();
+        } else if (examen == 2) {
+              System.out.println("Praktijk");          //PraktijkExamenVragen.toetsMakken();
+        } else {
+            examenAfnemen();
+        }
     }
 
     public static void examenLijst () {

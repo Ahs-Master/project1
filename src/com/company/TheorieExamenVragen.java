@@ -3,32 +3,25 @@ package com.company;
 import java.util.*;
 
 public class TheorieExamenVragen {
-    private static ArrayList<TheorieExamenClass> theorieExamenVragens;
+    private static ArrayList<TheorieExamenClass> theorieExamenVragens = new ArrayList<>();
+
 
     public TheorieExamenVragen() {
-
-        //Array Initialiseren
-        theorieExamenVragens = new ArrayList<>();
 
         //Vraag 1
         String vraag1 = "Wat is jou naam?"; //Vraag
         String[] keuze1 = {"Kevin", "Johnny", "Rachid"}; //Aantwoorden.
         String aantwoord1 = "Rachid";
-        theorieExamenVragens.add(new TheorieExamenClass(vraag1, keuze1, aantwoord1)); // de vraag en aantwoorden in de array stoppen.
+        theorieExamenVragens.add(new TheorieExamenClass(vraag1,keuze1,aantwoord1)); // de vraag en aantwoorden in de array stoppen.
+
+        //Vraag 2
+        String vraag2 = "Wat is jou naam?"; //Vraag
+        String[] keuze2 = {"Kevin", "Johnny", "Rachid"}; //Aantwoorden.
+        String aantwoord2 = "Rachid";
+        theorieExamenVragens.add(new TheorieExamenClass(vraag2,keuze2,aantwoord2)); // de vraag en aantwoorden in de array stoppen.
 
 
-        //vraag 2
-        String vraag2 = "Wat is jou adress?"; //Vraag
-        String[] aantwoord2 = {"Souax", "Jan-Thiel", "Mahuma"};//Aantwoorden.
-        theorieExamenVragens.add(new TheorieExamenClass(vraag2, aantwoord2, "Mahuma")); // de vraag en aantwoorden in de array stoppen.
-
-        //        om meer vragen te makken gewoon copy paste ---------------->>>
-        //
-        //
-        //       en de vraag en aantwoord veranderen ;)
-
-
-        Collections.shuffle(theorieExamenVragens, new Random()); //vragen in random elke keer dat de test gemaakt wordt.
+       Collections.shuffle(theorieExamenVragens, new Random()); //vragen in random elke keer dat de test gemaakt wordt.
 
 
     }
@@ -40,16 +33,17 @@ public class TheorieExamenVragen {
             for (int vraag = 0; vraag < theorieExamenVragens.size(); vraag++) {   // de vragen uitprinten op scherm.
                 System.out.println(theorieExamenVragens.get(vraag).getVraag());
 
-
                 //om te checken hoeveel keuzes je heb en keuzes op de scherm uitprinten
                 int numKeuzes = theorieExamenVragens.get(vraag).getKeuzes().size();
                 for (int keuze = 0; keuze < numKeuzes; keuze++) {
                     System.out.println((keuze + 1) + ": " + theorieExamenVragens.get(vraag).getKeuzes().get(keuze));
                 }
 
-                // aantwoord geven op de vraag met 1 tot en met de keuzes.
+                // aantwoord geven op de vraag met 1 tot en met de (3)keuzes.
                 // desnoods ook om te checken of de je een correcte aantwoord heb gekregen bij de vraag.
+                System.out.print("Aantwoord: ");
                 int aantwoord = scanner.nextInt();
+                System.out.println();
                 ArrayList<String> Keuzes = theorieExamenVragens.get(vraag).getKeuzes();
                 String correcteAntwoord = theorieExamenVragens.get(vraag).getAantwoord();
                 int correcteAntwoordIndex = Keuzes.indexOf(correcteAntwoord);
@@ -59,14 +53,25 @@ public class TheorieExamenVragen {
             }
             scanner.close();
 
-    }
-        //bonus om de vragen op de scherm te tonen.
-    public static void DisplayVragen() {
+
+
+
+             System.out.print(String.format("je heb : %s van de %s punten gehaald. ",correcteAantwoorden,theorieExamenVragens.size()));
+            }
+
+
+        //om de vragen op de scherm te tonen.
+    public static void displayVragen() {
         for (TheorieExamenClass theorieExamenVragen : theorieExamenVragens) {
             System.out.println(theorieExamenVragen.getVraag());
 
         }
     }
+    public static void displayCOunter(){
+        System.out.println(theorieExamenVragens.size());
+    }
+
 
 }
-
+// 1: Kevin
+// 2: Johnny
