@@ -9,7 +9,7 @@ public class Menu {
 
     public static void voerJeNaamIn () {
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("Voer je naam in: ");
+        System.out.print("Voer je naam in: ");
         naam = scanner.next();
         beginScherm();
     }
@@ -39,7 +39,7 @@ public class Menu {
 
         int keuze;
 
-        if (scanner.hasNextInt() == true) {
+        if (scanner.hasNextInt()) {
             keuze = scanner.nextInt();
             scanner.nextLine();
             if (keuze == 1) {
@@ -58,7 +58,7 @@ public class Menu {
                 System.out.println("ga naar menu van 7");
             } else if (keuze == 0) {
                 System.out.println("ga naar menu van 0");
-            } else if (keuze != 1 || keuze != 2 || keuze != 3 || keuze != 4 || keuze != 5 || keuze != 6 || keuze != 7 || keuze != 0) {
+            } else {
                 System.out.println("Kies aub een menu... Druk op Enter om verder te gaan");
                 scanner.nextLine();
                 beginScherm();
@@ -80,14 +80,14 @@ public class Menu {
         System.out.println();
         System.out.println("2) Praktijk examen");
         System.out.println();
-        System.out.printf("Kies uw examen: ");
+        System.out.print("Kies uw examen: ");
 
         int examen;
         examen = scanner.nextInt();
         if (examen == 1) {
-            TheorieExamenVragen.ToetsenMakken();
+            TheorieExamenToets.ToetsMakken();
         } else if (examen == 2) {
-              System.out.println("Praktijk");          //PraktijkExamenVragen.toetsMakken();
+            PraktijkExamenToets.ToetsMakken();          //PraktijkExamenVragen.toetsMakken();
         } else {
             examenAfnemen();
         }
@@ -105,7 +105,7 @@ public class Menu {
 
         int keuze;
 
-        if (scanner.hasNextInt() == true) {
+        if (scanner.hasNextInt()) {
             keuze = scanner.nextInt();
             scanner.nextLine();
             if (keuze == 1) {
