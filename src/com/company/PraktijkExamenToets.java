@@ -19,7 +19,7 @@ public class PraktijkExamenToets extends ToetsVragen {
         int correcteAantwoorden = 0; // Correcte aantwoorden voor score. de score systeem heb ik nog niet geimplementeerd. Ben moe.
 
         for (int vraag = 0; vraag < praktijkVragen.size(); vraag++) {   // de vragen uitprinten op scherm.
-            System.out.println(Vragen.get(vraag));
+            System.out.printf("Vraag %d: %s%n",vraag + 1,Vragen.get(vraag));
 
 
             int numKeuzes = praktijkVragen.get(vraag).getKeuzes().size();
@@ -66,6 +66,7 @@ public class PraktijkExamenToets extends ToetsVragen {
 
 
 
+
     }
 
     //Testing Methods
@@ -75,7 +76,9 @@ public class PraktijkExamenToets extends ToetsVragen {
 
     //om de vragen op de scherm te tonen.
     public static void displayVragen(){
-        System.out.println(praktijkVragen.size());
+        for (int i = 0; i < praktijkVragen.size(); i++){
+            System.out.printf("Vraag %d: %s%n",i + 1,praktijkVragen.get(i).getVraag(i));
+        }
 
 
     }

@@ -188,7 +188,7 @@ public class TheorieExamenToets extends ToetsVragen{
         //om de vragen op de scherm te tonen.
     public static void displayTheorieVragen(){
             for (int i = 0; i < TheorieExamenToets.theorieVragen.size(); i++){
-                System.out.println(TheorieExamenToets.theorieVragen.get(i));
+                System.out.printf("Vraag %d: %s",i,TheorieExamenToets.theorieVragen.get(i));
                 System.out.println();
             }
 
