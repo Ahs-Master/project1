@@ -4,12 +4,15 @@ import java.util.*;
 
 public class PraktijkExamenToets extends ToetsVragen {
 
+    //<------Instance Variables------->
     public static ArrayList<ToetsVragen> praktijkVragen = new ArrayList<>();
 
+    //<------Constructor------->
     public PraktijkExamenToets(String vraag, String[] keuzes, String aantwoord) {
         super(vraag, keuzes, aantwoord);
     }
 
+    //<------Om de toets te beginnen------->
     public static void ToetsMakken() {
 
         vragenMaken();
@@ -43,6 +46,7 @@ public class PraktijkExamenToets extends ToetsVragen {
         System.out.printf("je heb : %s van de %s punten gehaald. ", correcteAantwoorden, praktijkVragen.size());
     }
 
+    //<------Om de vragen te makken------->
     public static void vragenMaken() {
         String vraag = "Moet je mensen voor laten gaan als ze willen oversteken bij een zebrapad?"; //Vraag
         String[] keuze = {"ja", "nee"}; //Aantwoorden.
@@ -67,7 +71,7 @@ public class PraktijkExamenToets extends ToetsVragen {
 
     }
 
-    //om de vragen op de scherm te tonen.
+    //<------Om de vragen op de scherm te tonen------->
     public static void displayVragen() {
         vragenMaken();
         for (int i = 0; i < praktijkVragen.size(); i++) {
@@ -78,6 +82,7 @@ public class PraktijkExamenToets extends ToetsVragen {
 
     }
 
+    //<------Om de keuzes op scherm te tonen------->
     public static void displayKeuzes() {
         vragenMaken();
         for (ToetsVragen toetsVragen : praktijkVragen) {
