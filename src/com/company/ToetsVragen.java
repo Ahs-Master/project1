@@ -24,6 +24,7 @@ public class ToetsVragen {
 
         Collections.shuffle(this.keuzes);
     }
+    public ToetsVragen(){}
 
 
 

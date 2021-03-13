@@ -154,7 +154,9 @@ public class TheorieExamenToets extends ToetsVragen{
             int correcteAantwoorden = 0; // Correcte aantwoorden voor score. de score systeem heb ik nog niet geimplementeerd. Ben moe.
 
             for (int vraag = 0; vraag < TheorieExamenToets.theorieVragen.size(); vraag++) {   // de vragen uitprinten op scherm.
-                System.out.println();
+                System.out.println(
+
+                );
 
                 //om te checken hoeveel keuzes je heb en keuzes op de scherm uitprinten
                 int numKeuzes = TheorieExamenToets.theorieVragen.get(vraag).getKeuzes().size();
@@ -184,10 +186,19 @@ public class TheorieExamenToets extends ToetsVragen{
 
 
         //om de vragen op de scherm te tonen.
-        public static void displayTheorieVragen(){
+    public static void displayTheorieVragen(){
             for (int i = 0; i < TheorieExamenToets.theorieVragen.size(); i++){
                 System.out.println(TheorieExamenToets.theorieVragen.get(i));
                 System.out.println();
             }
+
     }
+    public static void displayKeuzes() {
+        for (int i = 0; i < TheorieExamenToets.theorieVragen.size(); i++) {
+            System.out.println(TheorieExamenToets.theorieVragen.get(i));
+            System.out.println();
+        }
+    }
+
+
 }
