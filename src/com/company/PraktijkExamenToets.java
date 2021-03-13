@@ -10,16 +10,16 @@ public class PraktijkExamenToets extends ToetsVragen {
         super(vraag, keuzes, aantwoord);
     }
 
-    public static void ToetsMakken(){
+    public static void ToetsMakken() {
 
-        PraktijkExamenToets.VragenMaken();
+        vragenMaken();
 
 
         Scanner scanner = new Scanner(System.in);
         int correcteAantwoorden = 0; // Correcte aantwoorden voor score. de score systeem heb ik nog niet geimplementeerd. Ben moe.
 
         for (int vraag = 0; vraag < praktijkVragen.size(); vraag++) {   // de vragen uitprinten op scherm.
-            System.out.printf("Vraag %d: %s%n",vraag + 1,Vragen.get(vraag));
+            System.out.printf("Vraag %d: %s%n", vraag + 1, Vragen.get(vraag));
 
 
             int numKeuzes = praktijkVragen.get(vraag).getKeuzes().size();
@@ -32,7 +32,7 @@ public class PraktijkExamenToets extends ToetsVragen {
             System.out.println();
 
 
-            ArrayList <String> Keuzes = praktijkVragen.get(vraag).getKeuzes();
+            ArrayList<String> Keuzes = praktijkVragen.get(vraag).getKeuzes();
             String correcteAntwoord = getAantwoord();
             int correcteAntwoordIndex = Keuzes.indexOf(correcteAntwoord);
             if (aantwoord == correcteAntwoordIndex + 1) {
@@ -40,46 +40,52 @@ public class PraktijkExamenToets extends ToetsVragen {
             }
         }
         scanner.close();
-        System.out.printf("je heb : %s van de %s punten gehaald. ",correcteAantwoorden,praktijkVragen.size());
+        System.out.printf("je heb : %s van de %s punten gehaald. ", correcteAantwoorden, praktijkVragen.size());
     }
 
-    public static void VragenMaken(){
+    public static void vragenMaken() {
         String vraag = "Moet je mensen voor laten gaan als ze willen oversteken bij een zebrapad?"; //Vraag
         String[] keuze = {"ja", "nee"}; //Aantwoorden.
         String aantwoord = "ja";
-        PraktijkExamenToets.praktijkVragen.add(new ToetsVragen (vraag,keuze,aantwoord));
+        PraktijkExamenToets.praktijkVragen.add(new ToetsVragen(vraag, keuze, aantwoord));
 
         vraag = "Wat is 2 + 2?"; //Vraag
         keuze = new String[]{"ja", "nee"}; //Aantwoorden.
         aantwoord = "ja";
-        PraktijkExamenToets.praktijkVragen.add(new ToetsVragen (vraag,keuze,aantwoord));
+        PraktijkExamenToets.praktijkVragen.add(new ToetsVragen(vraag, keuze, aantwoord));
 
         vraag = "Test Test Tes?"; //Vraag
         keuze = new String[]{"ja", "nee"}; //Aantwoorden.
         aantwoord = "ja";
-        PraktijkExamenToets.praktijkVragen.add(new ToetsVragen (vraag,keuze,aantwoord));
+        PraktijkExamenToets.praktijkVragen.add(new ToetsVragen(vraag, keuze, aantwoord));
 
         vraag = "Gone with the wind?"; //Vraag
         keuze = new String[]{"ja", "nee"}; //Aantwoorden.
         aantwoord = "ja";
-        PraktijkExamenToets.praktijkVragen.add(new ToetsVragen (vraag,keuze,aantwoord));
+        PraktijkExamenToets.praktijkVragen.add(new ToetsVragen(vraag, keuze, aantwoord));
 
 
-
-
-    }
-
-    //Testing Methods
-    public static void check(){
-         System.out.println(PraktijkExamenToets.praktijkVragen.get(1).getKeuzes().size());
     }
 
     //om de vragen op de scherm te tonen.
-    public static void displayVragen(){
-        for (int i = 0; i < praktijkVragen.size(); i++){
-            System.out.printf("Vraag %d: %s%n",i + 1,praktijkVragen.get(i).getVraag(i));
+    public static void displayVragen() {
+        vragenMaken();
+        for (int i = 0; i < praktijkVragen.size(); i++) {
+            System.out.printf("Vraag %d: %s%n", i + 1, praktijkVragen.get(i).getVraag(i));
+            System.out.println();
         }
 
 
+    }
+
+    public static void displayKeuzes() {
+        vragenMaken();
+        for (ToetsVragen toetsVragen : praktijkVragen) {
+            for (int k = 0; k < toetsVragen.getKeuzes().size(); k++) {
+                System.out.printf("%d: %s%n", k + 1, toetsVragen.getKeuzes().get(k));
+            }
+            System.out.println();
+
+        }
     }
 }

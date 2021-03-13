@@ -48,10 +48,8 @@ public class ToetsVragen {
     }
 
     //<---------Mutators-------->
-    public static void addVraag(String vraag, String [] keuzes, String aantwoord){
+    public void addVraag(String vraag, String [] keuzes, String aantwoord){
         new ToetsVragen(vraag,keuzes,aantwoord);
-
-
 
     }
     public void setStudentIsGeslaagd(Student student){
