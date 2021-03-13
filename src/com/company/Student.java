@@ -9,7 +9,7 @@ public class Student {
     //<------Instance Variables------->
     private final String naam;
     private final String achternaam;
-    private static Integer studentId = 20130767;
+    private static Integer studentId = 20130767; // StudentID moet ergens beginnen.
     private static boolean geslaagd;
 
     //<------Listen van O.A Student, GeslaagdeStudenten,StudentIdLijst------->
