@@ -123,7 +123,7 @@ public class Main {
 
         */
         System.out.println();
-        System.out.println("1) Terug naar hoofdmenu");
+        System.out.println("1) Terug naar hoofdmenu ");
 
         int keuze;
 
