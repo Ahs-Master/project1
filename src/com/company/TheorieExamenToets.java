@@ -5,7 +5,7 @@ import java.util.*;
 public class TheorieExamenToets extends ToetsVragen {
 
     //<------Instance Variables------->
-    public static ArrayList<ToetsVragen> theorieVragen = new ArrayList<>();
+    private static ArrayList<ToetsVragen> theorieVragen = new ArrayList<>();
 
     //<------Instance Variables------->
     public TheorieExamenToets(String vraag, String[] keuzes, String aantwoord) {
@@ -61,11 +61,11 @@ public class TheorieExamenToets extends ToetsVragen {
 
         //Vraag 3
         String vraag3 = "Moet je een politieauto voorang geven die zwaailichten aan heeft?"; //Vraag
-        String[] keuze3 = {"ja", "misschien", "nee"}; //Aantwoorden.
+        String[] keuze3 = {"ja", "nee"}; //Aantwoorden.
         String aantwoord3 = "ja";
         TheorieExamenToets.theorieVragen.add(new ToetsVragen(vraag3, keuze3, aantwoord3)); // de vraag en aantwoorden in de array stoppen.
 
-        //Vraag 4
+        //Meerkeuze
         String vraag4 = "Hoe hard mag je rijden met een aanhangwagen op de snelweg?"; //Vraag
         String[] keuze4 = {"130km/h", "90km/h", "Je mag niet rijden op de snelweg met een aanhangwagen"}; //Aantwoorden.
         String aantwoord4 = "90km/h";
@@ -168,7 +168,7 @@ public class TheorieExamenToets extends ToetsVragen {
         TheorieExamenToets.theorieVragen.add(new ToetsVragen(vraag20, keuze20, aantwoord20)); // de vraag en aantwoorden in de array stoppen.
 
 
-        Collections.shuffle(TheorieExamenToets.theorieVragen, new Random()); //vragen in random elke keer dat de test gemaakt wordt.
+
 
 
     }
@@ -194,5 +194,11 @@ public class TheorieExamenToets extends ToetsVragen {
             System.out.println();
 
         }
+    }
+
+    //<------Om vragen toe te voegen aan de toets------->
+    public static void addVraag(String vraag, String [] keuzes, String aantwoord){
+        theorieVragen.add(new TheorieExamenToets(vraag,keuzes,aantwoord));
+
     }
 }

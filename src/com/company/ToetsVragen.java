@@ -7,7 +7,7 @@ import java.util.Collections;
 public class ToetsVragen {
 
     //<--------Instance Variables (Public omdat ze Inherited moeten worden door andere classen)------->
-    public String vraag;
+    public static String vraag;
     public static String aantwoord;
     public Integer aantalStudentenGeslaagd;
 
@@ -19,10 +19,10 @@ public class ToetsVragen {
     public static ArrayList<String> Vragen = new ArrayList<>();
 
     //<--------Constructor voor Toetsen------->
-    public ToetsVragen(String vraag, String[] keuzes, String aantwoord) {
+    public ToetsVragen(String vraag, String[] keuzes, String aantWoord) {
 
-        this.vraag = vraag;
-        this.aantwoord = aantwoord;
+        vraag = vraag;
+        aantwoord = aantWoord;
 
 
         //<--------keuzes adden aan de Meerkeuzelijst------->
@@ -33,7 +33,7 @@ public class ToetsVragen {
         Collections.shuffle(this.keuzes);
 
         //<-------vragen toevoegen aan de Vragenlijst-------->
-        Vragen.add(this.vraag);
+        Vragen.add(vraag);
     }
 
     //<--------Accessors-------->
@@ -48,13 +48,8 @@ public class ToetsVragen {
     }
 
     //<---------Mutators-------->
-    public void addVraag(String vraag, String [] keuzes, String aantwoord){
-        new ToetsVragen(vraag,keuzes,aantwoord);
-
-    }
     public void setStudentIsGeslaagd(Student student){
         aantalStudentenGeslaagd++;
         Student.setWelGeslaagd(student);
     }
-
 }

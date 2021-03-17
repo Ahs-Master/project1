@@ -6,7 +6,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Student {
 
-    //<------Instance Variables------->
+    //<------Ins+tance Variables------->
     private final String naam;
     private final String achternaam;
     private static Integer studentId = 20130767; // StudentID moet ergens beginnen.
@@ -33,8 +33,8 @@ public class Student {
         /*Generate a Random Number for StudentID elke keer dat een nieuwe student aangemaakt wordt. als de studentID al een keer
         voorkomt, wordt er een nieuwe number gemaakt.*/
 
-        for (Integer integer : studentenIdLijst) {
-            if (integer.equals(studentId)) {
+        for (Integer K : studentenIdLijst) {
+            if (K.equals(studentId)) {
                 studentId = ThreadLocalRandom.current().nextInt(20130767, 20130999);
             }
         }

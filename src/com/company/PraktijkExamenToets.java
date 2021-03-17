@@ -5,7 +5,7 @@ import java.util.*;
 public class PraktijkExamenToets extends ToetsVragen {
 
     //<------Instance Variables------->
-    public static ArrayList<ToetsVragen> praktijkVragen = new ArrayList<>();
+    private static ArrayList<ToetsVragen> praktijkVragen = new ArrayList<>();
 
     //<------Constructor------->
     public PraktijkExamenToets(String vraag, String[] keuzes, String aantwoord) {
@@ -54,20 +54,19 @@ public class PraktijkExamenToets extends ToetsVragen {
         PraktijkExamenToets.praktijkVragen.add(new ToetsVragen(vraag, keuze, aantwoord));
 
         vraag = "Wat is 2 + 2?"; //Vraag
-        keuze = new String[]{"ja", "nee"}; //Aantwoorden.
-        aantwoord = "ja";
+        keuze = new String[]{"15", "600","4"}; //Aantwoorden.
+        aantwoord = "4";
         PraktijkExamenToets.praktijkVragen.add(new ToetsVragen(vraag, keuze, aantwoord));
 
         vraag = "Test Test Tes?"; //Vraag
-        keuze = new String[]{"ja", "nee"}; //Aantwoorden.
-        aantwoord = "ja";
+        keuze = new String[]{"Google", "Dongle","Wongle"}; //Aantwoorden.
+        aantwoord = "Wongle";
         PraktijkExamenToets.praktijkVragen.add(new ToetsVragen(vraag, keuze, aantwoord));
 
         vraag = "Gone with the wind?"; //Vraag
-        keuze = new String[]{"ja", "nee"}; //Aantwoorden.
-        aantwoord = "ja";
+        keuze = new String[]{"Sparks", "Larks"}; //Aantwoorden.
+        aantwoord = "Sparks";
         PraktijkExamenToets.praktijkVragen.add(new ToetsVragen(vraag, keuze, aantwoord));
-
 
     }
 
@@ -92,5 +91,11 @@ public class PraktijkExamenToets extends ToetsVragen {
             System.out.println();
 
         }
+    }
+
+    //<------Om vragen toe te voegen aan de toets------->
+    public static void addVraag(String vraag, String [] keuzes, String aantwoord){
+        praktijkVragen.add(new PraktijkExamenToets(vraag,keuzes,aantwoord));
+
     }
 }
