@@ -25,7 +25,7 @@ public class ExamenTabel {
         if(aantalpunten>=15)
         {
             System.out.println("Je bent geslaagd voor de toets!");
-            
+
         }
     }
 
