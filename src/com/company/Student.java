@@ -50,9 +50,7 @@ public class Student extends Gebruiker {
     public String getAchternaam() {
         return achternaam;
     }
-    public Integer getStudentId(){
-        return studentId;
-    }
+
 
 }
 
