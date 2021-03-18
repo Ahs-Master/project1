@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class ExamenTabel {
+public class  Examen {
 
     public static String examenNaam;
     public static Integer aantalPogingen;
@@ -10,7 +10,7 @@ public class ExamenTabel {
     public static ArrayList <Vragen> examenVragen;
 
 
-    public ExamenTabel(String examenNaam)
+    public Examen(String examenNaam)
     {
         this.examenNaam = examenNaam;
         examenVragen.add(Vragen);
@@ -18,7 +18,7 @@ public class ExamenTabel {
 
     public void beginExamen()
     {
-        TheorieExamenToets.ToetsMakken();
+
     }
 
     public void setStudentIsGeslaagd(Student student)
@@ -27,7 +27,7 @@ public class ExamenTabel {
         if(aantalpunten>=11)
         {
             Student.setWelGeslaagd(student);
-            System.out.printf("Je bent geslaagd voor de toets %s!",ExamenTabel.examenNaam);
+            System.out.printf("Je bent geslaagd voor de toets %s!",Examen.examenNaam);
 
         }
 

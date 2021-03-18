@@ -85,9 +85,7 @@ public class Menu {
         int examen;
         examen = scanner.nextInt();
         if (examen == 1) {
-            TheorieExamenToets.ToetsMakken();
         } else if (examen == 2) {
-            PraktijkExamenToets.ToetsMakken();          //PraktijkExamenVragen.toetsMakken();
         } else {
             examenAfnemen();
         }

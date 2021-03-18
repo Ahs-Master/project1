@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class ToetsVragen {
+public class Vragen {
 
     //<--------Instance Variables (Public omdat ze Inherited moeten worden door andere classen)------->
     public static String vraag;
@@ -19,7 +19,7 @@ public class ToetsVragen {
     public static ArrayList<String> Vragen = new ArrayList<>();
 
     //<--------Constructor voor Toetsen------->
-    public ToetsVragen(String vraag, String[] keuzes, String aantWoord) {
+    public Vragen(String vraag, String[] keuzes, String aantWoord) {
 
         vraag = vraag;
         aantwoord = aantWoord;
