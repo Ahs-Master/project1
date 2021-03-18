@@ -1,17 +1,19 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class ExamenTabel {
 
-    static String examenNaam;
-    static Integer aantalPogingen;
-    static Integer aantalpunten;
-    //ArrayList<Vragen> examenVragen;
+    public static String examenNaam;
+    public static Integer aantalPogingen;
+    public static Integer aantalpunten;
+    public static ArrayList <Vragen> examenVragen;
 
 
     public ExamenTabel(String examenNaam)
     {
         this.examenNaam = examenNaam;
-        //examenVragen.add(Vragen);
+        examenVragen.add(Vragen);
     }
 
     public void beginExamen()
@@ -22,15 +24,14 @@ public class ExamenTabel {
     public void setStudentIsGeslaagd(Student student)
     {
 
-        if(aantalpunten>=15)
+        if(aantalpunten>=11)
         {
             Student.setWelGeslaagd(student);
-            System.out.println("Je bent geslaagd voor de toets!");
+            System.out.printf("Je bent geslaagd voor de toets %s!",ExamenTabel.examenNaam);
 
         }
 
-        else if(aantalpunten<=14)
-        {
+        else {
             System.out.println("Helaas, je bent gezakt");
         }
     }
