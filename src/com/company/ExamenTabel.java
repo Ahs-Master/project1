@@ -16,17 +16,28 @@ public class ExamenTabel {
 
     public void beginExamen()
     {
-        //hier runnen we de examen/
+        TheorieExamenToets.ToetsMakken();
     }
 
-    public void setStudentIsGeslaagd()
+    public void setStudentIsGeslaagd(Student student)
     {
 
         if(aantalpunten>=15)
         {
+            Student.setWelGeslaagd(student);
             System.out.println("Je bent geslaagd voor de toets!");
 
         }
+
+        else if(aantalpunten<=14)
+        {
+            System.out.println("Helaas, je bent gezakt");
+        }
+    }
+
+    public Integer getAantalPogingen()
+    {
+        return aantalPogingen;
     }
 
 }
