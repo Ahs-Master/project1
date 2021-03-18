@@ -24,7 +24,7 @@ public class  Examen {
     public void setStudentIsGeslaagd(Student student)
     {
 
-        if(aantalpunten>=11)
+        if(aantalpunten>=11 && aantalPogingen<=2)
         {
             Student.setWelGeslaagd(student);
             System.out.printf("Je bent geslaagd voor de toets %s!",Examen.examenNaam);
@@ -40,5 +40,6 @@ public class  Examen {
     {
         return aantalPogingen;
     }
+
 
 }
