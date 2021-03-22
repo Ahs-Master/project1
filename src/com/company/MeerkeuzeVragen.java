@@ -16,7 +16,6 @@ public class MeerkeuzeVragen extends Vragen {
 
         Collections.shuffle(this.keuzes);
 
-        Vragen.add(vraag);
     }
 
     public ArrayList<String> getKeuzes() {
