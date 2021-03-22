@@ -14,7 +14,7 @@ public class Vragen {
     }
     public String getVraag(){ return this.vraag; }
     public String getAntwoord(){ return this.antwoord; }
-    public static vragenUitprinten(){
+    public static void vragenUitprinten(){
         System.out.println(Vragen);
     }
 }
