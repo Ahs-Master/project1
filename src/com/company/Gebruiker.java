@@ -1,6 +1,6 @@
 package com.company;
 
-public class Gebruiker {
+ public abstract class Gebruiker {
     public String naam;
     public String achternaam;
 
