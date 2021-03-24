@@ -31,7 +31,7 @@ public class Student extends Gebruiker {
     public static void printStudentLijst() {
         for (int i = 0; i < studentenLijst.size(); i++ ) {   // de studenten uitprinten op scherm.
 
-            System.out.printf("Student Naam: %sn",studentenLijst.get(i).getFullNaam());
+            System.out.printf("Student Naam: %s%n",studentenLijst.get(i).getFullNaam());
             System.out.printf("Student Nummer: %d%n%n",studentenIdLijst.get(i));
         }
     }

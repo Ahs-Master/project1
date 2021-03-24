@@ -11,6 +11,6 @@ package com.company;
     }
     //<------Accessor------>
     public String getFullNaam() {
-        return String.format("%s + %s",naam,achternaam);
+        return String.format("%s %s",naam,achternaam);
     }
 }
