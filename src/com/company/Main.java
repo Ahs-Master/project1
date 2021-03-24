@@ -191,7 +191,7 @@ public class Main {
 
 Class van rachid student verwijdern met arraylist.remove(naam) en checken of de student er wel echt in is dus met  arraylist.contains(naam)
 
- 
+
          */
     }
 
