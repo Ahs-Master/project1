@@ -6,21 +6,32 @@ public class Main {
 
     public static String naam;
 
+
+
     public static void main(String[] args) {
+
         voerJeNaamIn();
     }
-
     public static void voerJeNaamIn () {
         Scanner scanner = new Scanner(System.in);
-        System.out.printf("Voer je naam in: ");
+        System.out.println("Welkom ");
+        System.out.println();
+        System.out.printf("Voer uw naam in: ");
         naam = scanner.next();
+        System.out.println();
+        //System.out.println("Hallo " + naam);
         beginScherm();
     }
+
+
+
+
 
     public static void beginScherm() {
         Scanner scanner = new Scanner(System.in);
         System.out.println();
         System.out.println("Hallo " + naam);
+        System.out.println();
         System.out.println("Menu: ");
         System.out.println();
         System.out.println("1) Lijst met examens");
@@ -29,13 +40,11 @@ public class Main {
         System.out.println();
         System.out.println("3) Nieuwe student inschrijven");
         System.out.println();
-        System.out.println("4) Student verwijderen");
+        System.out.println("4) Examen afnemen");
         System.out.println();
-        System.out.println("5) Examen afnemen");
+        System.out.println("5) Welke examens heeft student gehaald?");
         System.out.println();
-        System.out.println("6) Welke examens heeft student gehaald?");
-        System.out.println();
-        System.out.println("7) Welke student heeft de meeste examens gehaald?");
+        System.out.println("6) Welke student heeft de meeste examens gehaald?");
         System.out.println();
         System.out.println("0) Afsluiten");
         System.out.println();
@@ -53,15 +62,13 @@ public class Main {
                 } else if (keuze == 3) {
                     studentInschrijven();
                 } else if (keuze == 4) {
-                    System.out.println("ga naar menu van 4");
-                } else if (keuze == 5) {
                     examenAfnemen();
+                } else if (keuze == 5) {
+                    //welke examens heeft student gehaald
                 } else if (keuze == 6) {
-                    System.out.println("ga naar menu van 6");
-                } else if (keuze == 7) {
-                    System.out.println("ga naar menu van 7");
+                    //welke student heeft meeste examens gehaald
                 } else if (keuze == 0) {
-                    System.out.println("ga naar menu van 0");
+                    afsluiten();
                 } else if (keuze != 1 || keuze != 2 || keuze != 3 || keuze != 4 || keuze != 5 || keuze != 6 || keuze != 7 || keuze != 0) {
                     System.out.printf("Kies aub een menu... Druk op Enter om verder te gaan");
                     scanner.nextLine();
@@ -222,6 +229,56 @@ Class van rachid student verwijdern met arraylist.remove(naam) en checken of de 
         }
     }
 
+    public static void afsluiten() {
+        //code voor afsluiten programma
+    }
+
 
 
 }
+
+
+//    public static void voerJeNaamInAlsStudent () {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Welkom, je hebt voor student gekozen");
+//        System.out.println();
+//        System.out.printf("Voer je naam in: ");
+//        studentNaam = scanner.next();
+//        System.out.println();
+//        System.out.println("Hallo " + studentNaam);
+//        //beginScherm();
+//    }
+
+//    public static void beginScherm() {
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println();
+//        System.out.println("Welkom bij rijschool de HHS (100% slagingspercentage), kies uit één van de onderstaande opties.");
+//        System.out.println();
+//        System.out.println("Wilt u inloggen als student of docent?");
+//        System.out.println();
+//        System.out.println("1) Ik ben een student");
+//        System.out.println();
+//        System.out.println("2) Ik ben een docent");
+//        System.out.println();
+//
+//        int keuze;
+//        if (scanner.hasNextInt() == true) {
+//            keuze = scanner.nextInt();
+//            scanner.nextLine();
+//            if (keuze == 1) {
+//                voerJeNaamInAlsStudent();
+//            }
+//            else if (keuze == 2) {
+//                voerJeNaamInAlsDocent();
+//            }else {
+//                System.out.println("Kies aub een menu. Druk op Enter om verder te gaan.");
+//                scanner.nextLine();
+//                BEGINSCHERM();
+//            }
+//
+//        } else {
+//            System.out.println("Kies een getal");
+//            BEGINSCHERM();
+//        }
+//
+//    }
