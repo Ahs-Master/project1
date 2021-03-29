@@ -12,5 +12,6 @@ package com.company;
     //<------Accessor------>
     public String getFullNaam() {
         return String.format("%s %s",naam,achternaam);
+        //google
     }
 }
